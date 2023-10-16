@@ -10,3 +10,11 @@ https://blog.japanwondertravel.com/what-is-omikuji-29421
 
 <h3>Exercise 1: dice_omikuji.zip</h3>
 Update Omikuji project to roll a 6 sided die.
+
+<h3>Exercise 2: flows_3-Axis_Visualization.json</h3>
+Node-RED program running on AWS EC2 Ubuntu server
+
+![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/d9f1e6e2-95eb-4745-a28c-0634463f75b9)
+
+![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/72733212-4c07-4b60-a0d4-fa4861f5ad58)
+
