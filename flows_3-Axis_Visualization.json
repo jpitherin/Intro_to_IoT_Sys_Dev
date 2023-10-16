@@ -1,0 +1,471 @@
+[
+    {
+        "id": "7d35f890a445c4f0",
+        "type": "tab",
+        "label": "Site for 3-Axis Accelerations Visualization",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3f1e42e2acf20c00",
+        "type": "inject",
+        "z": "7d35f890a445c4f0",
+        "name": "EdgeDevice",
+        "props": [
+            {
+                "p": "payload.with[0].content.acc_x",
+                "v": "0.2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.with[0].content.acc_y",
+                "v": "2.3",
+                "vt": "num"
+            },
+            {
+                "p": "payload.with[0].content.acc_z",
+                "v": "0.6",
+                "vt": "num"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 70,
+        "y": 80,
+        "wires": [
+            [
+                "5d5e3d01ce2b01ce",
+                "c65f54ef94cc621c",
+                "573ee3f03c53eb8a",
+                "f7c29a00a6d01416"
+            ]
+        ]
+    },
+    {
+        "id": "5d5e3d01ce2b01ce",
+        "type": "debug",
+        "z": "7d35f890a445c4f0",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c65f54ef94cc621c",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content.acc_x",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "b1ad5ac63f96c5e8",
+                "ea33aad3a18db0ba",
+                "4ec55c7ca60d75f2"
+            ]
+        ]
+    },
+    {
+        "id": "b1ad5ac63f96c5e8",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "a5829f05c59a9499",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "acceleration",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 490,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ea33aad3a18db0ba",
+        "type": "ui_gauge",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "a5829f05c59a9499",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4ec55c7ca60d75f2",
+        "type": "ui_chart",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "a5829f05c59a9499",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "573ee3f03c53eb8a",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content.acc_y",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 280,
+        "wires": [
+            [
+                "9af4b5268963ea6c",
+                "def9ebb2aae5cdc1",
+                "a09253a7e27d997c"
+            ]
+        ]
+    },
+    {
+        "id": "9af4b5268963ea6c",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "de1eca79b03edcb6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "acceleration",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 490,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "def9ebb2aae5cdc1",
+        "type": "ui_gauge",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "de1eca79b03edcb6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a09253a7e27d997c",
+        "type": "ui_chart",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "de1eca79b03edcb6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7c29a00a6d01416",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content.acc_z",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 420,
+        "wires": [
+            [
+                "24afd73cc0adb2ec",
+                "949ae66ef499af1e",
+                "1d7eaf53afa36670"
+            ]
+        ]
+    },
+    {
+        "id": "24afd73cc0adb2ec",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "ddfc225b29e74470",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "acceleration",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 490,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "949ae66ef499af1e",
+        "type": "ui_gauge",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "ddfc225b29e74470",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1d7eaf53afa36670",
+        "type": "ui_chart",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "ddfc225b29e74470",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5829f05c59a9499",
+        "type": "ui_group",
+        "name": "x-axis acceleration",
+        "tab": "37de55e5e1953b2d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de1eca79b03edcb6",
+        "type": "ui_group",
+        "name": "y-axis acceleration",
+        "tab": "37de55e5e1953b2d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ddfc225b29e74470",
+        "type": "ui_group",
+        "name": "z-axis acceleration",
+        "tab": "37de55e5e1953b2d",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37de55e5e1953b2d",
+        "type": "ui_tab",
+        "name": "Sensor Device",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
