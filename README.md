@@ -1,5 +1,7 @@
 # Intro_to_IoT_Sys_Dev
-Introduction to IoT System Development - Metropolia ICT intensive course taught by guest lecturer Shinji Chiba from Sendai College (Japan)
+Introduction to IoT System Development - Metropolia ICT intensive course taught by guest lecturer Shinji Chiba from Sendai College (Japan).
+
+Projects created in Monaca Cloud IDE: https://console.monaca.education/
 
 <h3>Provided Sample Project: Omikuji_project.zip</h3>
 What is Omikuji? Omikuji is a Japanese fortune slip.
