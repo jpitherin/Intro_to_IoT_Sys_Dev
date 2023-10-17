@@ -1,15 +1,15 @@
 # Intro_to_IoT_Sys_Dev
 Introduction to IoT System Development - Metropolia ICT intensive course taught by guest lecturer Shinji Chiba from Sendai College (Japan).
 
-Projects created in Monaca Cloud IDE: https://console.monaca.education/
+<h3>Exercise 1: dice_omikuji.zip</h3>
+Provided Sample Project: Omikuji_project.zip
+Update Omikuji project to roll a 6 sided die.
 
-<h3>Provided Sample Project: Omikuji_project.zip</h3>
+Created in Monaca Cloud IDE: https://console.monaca.education/
+
 What is Omikuji? Omikuji is a Japanese fortune slip.
 https://blog.japanwondertravel.com/what-is-omikuji-29421
 ![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/2cf6a373-8ab9-4180-922e-17bc790e0df3)
-
-<h3>Exercise 1: dice_omikuji.zip</h3>
-Update Omikuji project to roll a 6 sided die.
 
 <h3>Exercise 2: flows_3-Axis_Visualization.json</h3>
 Node-RED program running on AWS EC2 Ubuntu server. Simulates readings from a 3-axis acceleration sensor.
@@ -18,3 +18,8 @@ Node-RED program running on AWS EC2 Ubuntu server. Simulates readings from a 3-a
 
 ![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/72733212-4c07-4b60-a0d4-fa4861f5ad58)
 
+<h3>Exercise 4: IoT_Edge_Device_project.zip</h3>
+Provided Sample Project: IoT_Edge_Device_accx_project.zip
+Update web app to use compass and geolocation sensors.
+Created in Monaca Cloud IDE: https://console.monaca.education/
+https://en.docs.monaca.io/products_guide/debugger/installation/debugger_ios
