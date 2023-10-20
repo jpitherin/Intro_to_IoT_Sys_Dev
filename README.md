@@ -36,8 +36,8 @@ Version 2: Shake codes (movement registered each second):</br>
 <ul>
   <li>1111 = clear message</li>
   <li>1010 = print "Hello"</li>
-  <li>1011 = print current date</li>
-  <li>1101 = print current time</li>
+  <li>1011 = print "It is a beautiful day"</li>
+  <li>1101 = print timestamp</li>
 </ul></br>
 
 Version 1 codes:</br>
