@@ -28,3 +28,6 @@ https://en.docs.monaca.io/products_guide/debugger/installation/debugger_ios
 Connecting exercise 3 to Node-RED with dweet.io. Adding a worldmap visualization of location data. Saving sensor data in MongoDB database collection "smartphone". Retrieving three most recent readings from MongoDB.<br><br>
 
 ![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/1293d2f8-1e7e-4268-8cf9-36b9acdaa927)
+
+<h3>Exercise 5: IoT_Edge_Device_project_shake_msg</h3>
+Adding a pedometer and shake pattern to message decoder.
