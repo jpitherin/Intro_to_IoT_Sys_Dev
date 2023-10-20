@@ -30,4 +30,18 @@ Connecting exercise 3 to Node-RED with dweet.io. Adding a worldmap visualization
 ![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/1293d2f8-1e7e-4268-8cf9-36b9acdaa927)
 
 <h3>Exercise 5: IoT_Edge_Device_project_shake_msg</h3>
-Adding a pedometer and shake pattern to message decoder.
+Adding a pedometer and shake pattern to message decoder.</br></br>
+
+Version 2: Shake codes (movement registered each second):</br>
+<ul>
+  <li>1111 = clear message</li>
+  <li>1010 = print "Hello"</li>
+  <li>1011 = print current date</li>
+  <li>1101 = print current time</li>
+</ul></br>
+
+Version 1 codes:</br>
+<ul>
+  <li>111 = clear message</li>
+  <li>101 = print "hello"</li>
+</ul>
