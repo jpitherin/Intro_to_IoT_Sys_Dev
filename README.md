@@ -45,4 +45,6 @@ Version 1 codes:</br>
   <li>111 = clear message</li>
   <li>101 = print "hello"</li>
 </ul>
-![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/ea807525-023d-4343-a7be-28e59024f3ec)
+
+![image](https://github.com/jpitherin/Intro_to_IoT_Sys_Dev/assets/10441449/8e34e235-286d-4a77-a7e0-59b4e1784238)
+
