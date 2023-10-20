@@ -1,0 +1,1054 @@
+[
+    {
+        "id": "7d35f890a445c4f0",
+        "type": "tab",
+        "label": "Site for 3-Axis Accelerations Visualization",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3f1e42e2acf20c00",
+        "type": "inject",
+        "z": "7d35f890a445c4f0",
+        "name": "EdgeDevice",
+        "props": [
+            {
+                "p": "payload.with[0].content.acc_x",
+                "v": "0.2",
+                "vt": "num"
+            },
+            {
+                "p": "payload.with[0].content.acc_y",
+                "v": "2.3",
+                "vt": "num"
+            },
+            {
+                "p": "payload.with[0].content.acc_z",
+                "v": "0.6",
+                "vt": "num"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "5d5e3d01ce2b01ce",
+                "6af95a34b7f26889"
+            ]
+        ]
+    },
+    {
+        "id": "5d5e3d01ce2b01ce",
+        "type": "debug",
+        "z": "7d35f890a445c4f0",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b1ad5ac63f96c5e8",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "a5829f05c59a9499",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "acceleration",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ea33aad3a18db0ba",
+        "type": "ui_gauge",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "a5829f05c59a9499",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4ec55c7ca60d75f2",
+        "type": "ui_chart",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "a5829f05c59a9499",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9af4b5268963ea6c",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "de1eca79b03edcb6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "acceleration",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "def9ebb2aae5cdc1",
+        "type": "ui_gauge",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "de1eca79b03edcb6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a09253a7e27d997c",
+        "type": "ui_chart",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "de1eca79b03edcb6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7c29a00a6d01416",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content.acc_z",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "24afd73cc0adb2ec",
+                "949ae66ef499af1e",
+                "1d7eaf53afa36670"
+            ]
+        ]
+    },
+    {
+        "id": "24afd73cc0adb2ec",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "ddfc225b29e74470",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "acceleration",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "949ae66ef499af1e",
+        "type": "ui_gauge",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "ddfc225b29e74470",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1d7eaf53afa36670",
+        "type": "ui_chart",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "group": "ddfc225b29e74470",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-20",
+        "ymax": "20",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6af95a34b7f26889",
+        "type": "http request",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://dweet.io/get/latest/dweet/for/Shakemaster3000 ",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "261397e1fd035dba",
+                "a688fec592332681"
+            ]
+        ]
+    },
+    {
+        "id": "261397e1fd035dba",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "property": "payload.this",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "succeeded",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "c65f54ef94cc621c",
+                "573ee3f03c53eb8a",
+                "f7c29a00a6d01416",
+                "30ef69c1b3b40c64",
+                "838bade04fc1399d"
+            ]
+        ]
+    },
+    {
+        "id": "573ee3f03c53eb8a",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content.acc_y",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "9af4b5268963ea6c",
+                "def9ebb2aae5cdc1",
+                "a09253a7e27d997c"
+            ]
+        ]
+    },
+    {
+        "id": "c65f54ef94cc621c",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content.acc_x",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "b1ad5ac63f96c5e8",
+                "ea33aad3a18db0ba",
+                "4ec55c7ca60d75f2"
+            ]
+        ]
+    },
+    {
+        "id": "a688fec592332681",
+        "type": "debug",
+        "z": "7d35f890a445c4f0",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "30ef69c1b3b40c64",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.lat",
+                "pt": "msg",
+                "to": "payload.with[0].content.geo_lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.lon",
+                "pt": "msg",
+                "to": "payload.with[0].content.geo_lon",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.heading",
+                "pt": "msg",
+                "to": "payload.with[0].content.com",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.name",
+                "pt": "msg",
+                "to": "smartphone",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.speed",
+                "pt": "msg",
+                "to": "20",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 640,
+        "wires": [
+            [
+                "84b9c72c8c792b66"
+            ]
+        ]
+    },
+    {
+        "id": "84b9c72c8c792b66",
+        "type": "worldmap",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "false",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 640,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "838bade04fc1399d",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "property": "payload.with[0].created",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "created",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 150,
+        "y": 740,
+        "wires": [
+            [
+                "e2755642198a3db6"
+            ]
+        ]
+    },
+    {
+        "id": "e2755642198a3db6",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "created",
+                "pt": "flow",
+                "to": "payload.with[0].created",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.with[0].content",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.time",
+                "pt": "msg",
+                "to": "created",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 740,
+        "wires": [
+            [
+                "6935eaf78328fd0b"
+            ]
+        ]
+    },
+    {
+        "id": "6935eaf78328fd0b",
+        "type": "mongodb4",
+        "z": "7d35f890a445c4f0",
+        "clientNode": "2f6e3aa6a5a659ab",
+        "mode": "collection",
+        "collection": "smartphone",
+        "operation": "insertOne",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 640,
+        "y": 740,
+        "wires": [
+            [
+                "741e66c6aefbe95a"
+            ]
+        ]
+    },
+    {
+        "id": "741e66c6aefbe95a",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[{},{\"sort\":{\"_id\":-1},\"limit\":3}]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 840,
+        "wires": [
+            [
+                "10821f78e43d55fc"
+            ]
+        ]
+    },
+    {
+        "id": "10821f78e43d55fc",
+        "type": "mongodb4",
+        "z": "7d35f890a445c4f0",
+        "clientNode": "2f6e3aa6a5a659ab",
+        "mode": "collection",
+        "collection": "smartphone",
+        "operation": "find",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 470,
+        "y": 840,
+        "wires": [
+            [
+                "2f52ba755cbb6007",
+                "449e8ed4214b693d"
+            ]
+        ]
+    },
+    {
+        "id": "a66476cc4ca29087",
+        "type": "debug",
+        "z": "7d35f890a445c4f0",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "2f52ba755cbb6007",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "High",
+        "property": "payload[0].shake",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 210,
+        "y": 960,
+        "wires": [
+            [
+                "02d7b5d6ea906233"
+            ]
+        ]
+    },
+    {
+        "id": "02d7b5d6ea906233",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "Low",
+        "property": "payload[1].shake",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "59ae1a95a7d4041c",
+                "a66476cc4ca29087"
+            ]
+        ]
+    },
+    {
+        "id": "59ae1a95a7d4041c",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "High",
+        "property": "payload[2].shake",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "6a79bb26fbcdfcaa"
+            ]
+        ]
+    },
+    {
+        "id": "449e8ed4214b693d",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "High",
+        "property": "payload[0].shake",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 210,
+        "y": 1080,
+        "wires": [
+            [
+                "e4c51b81768dcac7"
+            ]
+        ]
+    },
+    {
+        "id": "e4c51b81768dcac7",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "High",
+        "property": "payload[1].shake",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 1080,
+        "wires": [
+            [
+                "b3d403217ccc1515"
+            ]
+        ]
+    },
+    {
+        "id": "b3d403217ccc1515",
+        "type": "switch",
+        "z": "7d35f890a445c4f0",
+        "name": "High",
+        "property": "payload[2].shake",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 1080,
+        "wires": [
+            [
+                "8c64d0412e3d9cd3",
+                "510cea5df026cdfe"
+            ]
+        ]
+    },
+    {
+        "id": "6a79bb26fbcdfcaa",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "\"Hello\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"Hello\"",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 960,
+        "wires": [
+            [
+                "6e27c14c1eebdeee"
+            ]
+        ]
+    },
+    {
+        "id": "8c64d0412e3d9cd3",
+        "type": "change",
+        "z": "7d35f890a445c4f0",
+        "name": "Clear",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"\"",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1080,
+        "wires": [
+            [
+                "6e27c14c1eebdeee"
+            ]
+        ]
+    },
+    {
+        "id": "510cea5df026cdfe",
+        "type": "debug",
+        "z": "7d35f890a445c4f0",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "6e27c14c1eebdeee",
+        "type": "ui_text",
+        "z": "7d35f890a445c4f0",
+        "group": "d5a56a90cba28672",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Message",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 920,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "a5829f05c59a9499",
+        "type": "ui_group",
+        "name": "x-axis acceleration",
+        "tab": "37de55e5e1953b2d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de1eca79b03edcb6",
+        "type": "ui_group",
+        "name": "y-axis acceleration",
+        "tab": "37de55e5e1953b2d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ddfc225b29e74470",
+        "type": "ui_group",
+        "name": "z-axis acceleration",
+        "tab": "37de55e5e1953b2d",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f6e3aa6a5a659ab",
+        "type": "mongodb4-client",
+        "name": "smartphoneSensor",
+        "protocol": "mongodb+srv",
+        "hostname": "cluster0.bt9j4si.mongodb.net",
+        "port": "",
+        "dbName": "EdgeDevices",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": true,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "30000",
+        "socketTimeoutMS": "0",
+        "minPoolSize": "0",
+        "maxPoolSize": "100",
+        "maxIdleTimeMS": "0",
+        "uri": "",
+        "advanced": "{}",
+        "uriTabActive": "tab-uri-simple"
+    },
+    {
+        "id": "d5a56a90cba28672",
+        "type": "ui_group",
+        "name": "Message",
+        "tab": "37de55e5e1953b2d",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37de55e5e1953b2d",
+        "type": "ui_tab",
+        "name": "Sensor Device",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
